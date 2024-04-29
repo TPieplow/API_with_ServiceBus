@@ -6,5 +6,5 @@ namespace Receiver.Controllers;
 [ApiController]
 public class SubscriberController : ControllerBase
 {
-  
 }
+

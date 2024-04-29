@@ -28,9 +28,10 @@ public class ServiceBusHandler
         await _processor.StartProcessingAsync();
     }
 
-    private async Task ErrorHandler(ProcessErrorEventArgs args)
+    private Task ErrorHandler(ProcessErrorEventArgs args)
     {
-        throw new NotImplementedException();
+        Debug.WriteLine(args.Exception.ToString());
+        return Task.CompletedTask;
     }
 
     private async Task MessageHandler(ProcessMessageEventArgs args)
